@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte base */
+html {
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Containers para centralizar conteúdo */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER / MENU */
+.header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed; /* Mantém o menu fixo no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo img {
+  max-height: 170px;
+}
+
+/* Navegação Desktop */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Botão de contato */
+.btn-contact {
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+  background-color: #0056b3;
+}
+
+/* Ícone de menu mobile */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mobile-menu-icon div {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: all 0.3s;
+}
+
+/* Título da seção de produtos */
+.section-title {
+  text-align: center;
+  margin-top: 130px; /* Ajustado para menor espaço */
+  margin-bottom: 10px; /* Reduzido para aproximar os produtos */
+}
+
+.section-title h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Ajuste para o primeiro produto ficar mais próximo do título */
+.container1:first-of-type {
+  margin-top: 10px; /* Antes estava 50px ou mais */
+}
+
+/* Ajuste global para os containers dos produtos */
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px auto; /* Reduzido para evitar espaçamento extra */
+  padding: 20px;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* Imagens */
+.foto {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Correção para a imagem do sensor */
+.foto3 {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Ajuste para os textos */
+.text-box {
+  flex: 1;
+  max-width: 600px;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.sobre-item {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+#site-footer {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+#footer-main {
+  background-color: #1f2937;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+#footer-col-company,
+#footer-col-contact {
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+#footer-col-company h3,
+#footer-col-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+#footer-bottom {
+  background-color: #4b5563;
+  text-align: center;
+  padding: 10px;
+}
+
+#footer-bottom p {
+  font-size: 0.9rem;
+}
+
+.Strong {
+  color: rgb(12, 12, 119); /* Cor azul */
+}
+
+.One {
+  color: red; /* Cor vermelha */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto,
+  .foto3 {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossos Contatos - StrongTechOne</title>
+    <link rel="stylesheet" href="../css/contato/styleCt.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <img src="../assets/imagens/logo2.png" alt="Logo StrongTechOne" />
+        </a>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="vantagens.html">Vantagens</a></li>
+            <li><a href="produtos.html" class="active">Produtos</a></li>
+            <li><a href="certificacoes.html">Certificações</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+          </ul>
+        </nav>
+
+        <a href="contato.html" class="btn-contact">Nosso contato</a>
+
+        <div class="mobile-menu-icon" id="mobileMenuIcon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-main">
+      <div class="container">
+        <section class="contact-info">
+          <h1>Entre em Contato</h1>
+          <p>
+            Fale conosco para mais informações ou suporte. Estamos disponíveis
+            para responder suas dúvidas e atender suas necessidades.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Endereço</h3>
+              <p>Av. Paulista, 2537 - Bela Vista, São Paulo - SP, 01311-300</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <h3>Telefone</h3>
+              <p>+55 11 99999-9999</p>
+              <p>+55 21 99999-9999</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <h3>E-mail</h3>
+              <p>info@strongenone.com</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-form">
+          <h2>Envie sua Mensagem</h2>
+          <form action="envia-contato.php" method="post">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Seu e-mail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone:</label>
+              <input
+                type="text"
+                id="telefone"
+                name="telefone"
+                placeholder="Seu telefone"
+              />
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem:</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                placeholder="Escreva sua mensagem"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-contact">Enviar</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer id="site-footer">
+      <div id="footer-main">
+        <div id="footer-col-company">
+          <h3>
+            <span class="Strong">Strong</span><span class="One">TechOne</span>
+          </h3>
+          <p>
+            Construímos soluções inovadoras para proteção digital e física, com
+            foco em eficiência e simplicidade.
+          </p>
+        </div>
+
+        <div id="footer-col-contact">
+          <h3>Contato</h3>
+          <ul>
+            <li>Av. Paulista, 2537 - Bela Vista, São Paulo - SP, 01311-300</li>
+            <li>info@strongone.com</li>
+            <li>+55 21 99999-9999</li>
+            <li>+55 11 99999-9999</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer-bottom">
+        <p>
+          © 2025 Copyright:
+          <strong>StrongOne</strong>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+      const nav = document.querySelector(".nav");
+
+      mobileMenuIcon.addEventListener("click", () => {
+        nav.classList.toggle("nav-active");
+        mobileMenuIcon.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>

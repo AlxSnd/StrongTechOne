@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ofertas - StrongTechOne</title>
+    <link rel="stylesheet" href="../css/ofertas/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <img src="../assets/imagens/logo2.png" alt="Logo StrongTechOne" />
+        </a>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="vantagens.html">Vantagens</a></li>
+            <li><a href="produtos.html" class="active">Produtos</a></li>
+            <li><a href="certificacoes.html">Certificações</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+          </ul>
+        </nav>
+
+        <a href="contato.html" class="btn-contact">Nosso contato</a>
+
+        <div class="mobile-menu-icon" id="mobileMenuIcon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="offers-main">
+      <div class="container">
+        <h1>Ofertas Especiais</h1>
+        <p class="intro">
+          Aproveite nossas promoções imperdíveis em produtos de segurança.
+          Confira os descontos e ofertas exclusivas!
+        </p>
+
+        <div class="carousel">
+          <!-- Botão Anterior -->
+          <button class="carousel-btn prev">&#10094;</button>
+
+          <!-- Slides do Carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-slide">
+              <img
+                src="../assets/imagens/Camera.png"
+                alt="Câmera de Segurança Wi-Fi"
+              />
+              <h2 class="titulo_slide">Câmera de Segurança Wi-Fi</h2>
+              <p>Monitoramento 24 horas com gravação em nuvem.</p>
+              <div class="price-info">
+                <span class="old-price">R$ 500,00</span>
+                <span class="new-price">R$ 400,00</span>
+                <span class="discount">20% OFF</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="../assets/imagens/Fechadura.png"
+                alt="Fechadura Inteligente"
+              />
+              <h2 class="titulo_slide">Fechadura Inteligente</h2>
+              <p>Controle de acesso remoto e notificações instantâneas.</p>
+              <div class="price-info">
+                <span class="old-price">R$ 350,00</span>
+                <span class="new-price">R$ 299,00</span>
+                <span class="discount">15% OFF</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="../assets/imagens/campainha.png"
+                alt="Campainha Inteligente"
+              />
+              <h2 class="titulo_slide">Campainha Inteligente</h2>
+              <p>
+                Comunicação em tempo real com visitantes e gravação de vídeo.
+              </p>
+              <div class="price-info">
+                <span class="price">R$ 250,00 c/u</span>
+                <span class="promo">Compre 3 e ganhe 1 grátis!</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer">
+      <div id="footer-main">
+        <div id="footer-col-company">
+          <h3>
+            <span class="Strong">Strong</span><span class="One">TechOne</span>
+          </h3>
+          <p>
+            Construímos soluções inovadoras para proteção digital e física, com
+            foco em eficiência e simplicidade.
+          </p>
+        </div>
+
+        <div id="footer-col-contact">
+          <h3>Contato</h3>
+          <ul>
+            <li>Av. Paulista, 2537 - Bela Vista, São Paulo - SP, 01311-300</li>
+            <li>info@strongone.com</li>
+            <li>+55 21 99999-9999</li>
+            <li>+55 11 99999-9999</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer-bottom">
+        <p>
+          © 2025 Copyright:
+          <strong>StrongOne</strong>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const slides = document.querySelectorAll(".carousel-slide");
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+      let slideIndex = 0;
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide) => (slide.style.display = "none"));
+        slideIndex = (index + totalSlides) % totalSlides;
+        slides[slideIndex].style.display = "block";
+      }
+
+      prevBtn.addEventListener("click", () => showSlide(slideIndex - 1));
+      nextBtn.addEventListener("click", () => showSlide(slideIndex + 1));
+
+      showSlide(slideIndex);
+
+      setInterval(() => {
+        showSlide(slideIndex + 1);
+      }, 5000);
+    </script>
+  </body>
+</html>
